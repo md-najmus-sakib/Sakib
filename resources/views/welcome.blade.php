@@ -3,7 +3,7 @@
     <title>Najmus Sakib</title>
 @endpush
 @section('main-content')
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,20 +12,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
+                    <a class="nav-link" href="">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#professional">Professional</a>
+                    <a class="nav-link" href="">Professional</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about-contact">About Me</a>
+                    <a class="nav-link" href="">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about-contact">Contact</a>
+                    <a class="nav-link me-2" href="">Contact</a>
                 </li>
             </ul>
         </div>
-        <i class="far fa-smile text-white me-3 d-none d-lg-block"></i> 
+        <i id="smile-icon" class="far fa-smile text-white me-3 d-none d-lg-block"></i> 
     </div>
 </nav>
 
@@ -53,5 +53,36 @@
             </div>
         </div>
     </section>
+    <section id="education" class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title mb-3 text-center">Education Details</h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5>Daffodil International University</h5>
+                        <p class="mb-1"><em>B.Sc. in CSE</em></p>
+                        <p class="mb-1"><em>Year: 2022 - 2025</em></p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Nawabganj Govt. College</h5>
+                        <p class="mb-1"><em>Passing Year: 2020</em></p>
+                        <p class="mb-1"><em>Group: Science</em></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <h5 class="mb-3">Social Media Links</h5>
+        <div class="d-flex justify-content-center footer-icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook ms-3 me-3"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin me-3"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter me-3"></i></a>
+        </div>
+        <p class="mb-0">&copy; Copyright <span id="current-year"></span></p>
+    </div>
+</footer>
 @endsection
