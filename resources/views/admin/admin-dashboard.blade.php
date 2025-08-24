@@ -170,3 +170,10 @@
 </div>
 @endif
 @endsection
+
+@push('scripts')
+<script>
+    setInterval(function() {
+    }, 30000);
+</script>
+@endpush

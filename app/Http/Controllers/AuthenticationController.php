@@ -16,11 +16,19 @@ class AuthenticationController extends Controller
         ]);
 
         if(Auth::attempt($credentials)){
-            return redirect('/admin/dashboard');
+            return redirect()->route('admin.dashboard');
         }
         else {
-            return redirect('/login');
+            return redirect()->route('login')->with('error', 'Invalid credentials');
         }
+    }
+
+    function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login');
     }
 
     function register(Request $request)
@@ -35,7 +43,7 @@ class AuthenticationController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-        echo "Registration successful!";
+        
+        return redirect()->route('login')->with('success', 'Registration successful!');
     }
-
 }
